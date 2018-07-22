@@ -1,0 +1,23 @@
+*{
+    font-size: 0;
+    margin:0;
+    padding:0;
+}
+.box{
+    background-color:black;
+    width:30px;
+    height:30px;
+    display:inline-block;
+}
+.wall{
+    background-color:blue;
+}
+/* .empty{
+    background-color:black;
+    
+} */
+.coin{
+    background-color:red;
+    background-image: url("coin.gif");
+}
+

@@ -1,0 +1,70 @@
+*{
+    margin:0px;
+    border:0px;
+    border-radius:10px;
+}
+#container{
+    height:580px;
+    width:970px;
+    background-color:darkblue;
+    padding:5px;
+}
+#header{
+    height:100px;
+    background-color:red;
+    margin:10px;
+    padding:10px;
+}
+#header p{
+    color:#ffffff;
+    font-size:30px;
+}
+#navigationBar{
+    padding-left:5px;
+    margin:10px;
+    vertical-align:top;
+    min-height: 150px;
+    width: 150px;
+    background-color:lightblue;
+    display: inline-block;
+}
+/* #content{
+    height:100px;
+} */
+#mainContent{
+    vertical-align: top;
+    padding:10px;
+    color:red;
+    margin:10px;
+    height:300px;
+    width:751px;
+    display:inline-block;
+    background-color:black;
+}
+#footer{
+    margin:10px;
+    vertical-align: bottom;
+    min-height: 50px;
+    background-color:grey;
+}
+#whiteSpace{
+    height:3000px;
+    width:900px;
+}
+a, .anker{
+    color:orange;
+    text-decoration: underline;
+}
+#mainContent b{
+    color:greenyellow;
+}
+ul li{
+    list-style:none;
+}
+ul li::before {
+    content: "\2022";
+    color: white;
+}
+li li::before{
+    content:"\2021";
+}

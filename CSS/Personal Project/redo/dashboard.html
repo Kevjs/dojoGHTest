@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="content.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <div id="wrapper" class="dashboardBox">
+        <div class="topBar">
+            <h1>User's Dashboard
+            </h1><div class="dropdown">
+                <p>Trying without span</p>
+                <div class="dropdown-content">
+                    <a href="loginPage.html">Log out</a>
+                    <p>so more here?</p>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <button onclick="turnBlock('dashboard')">Dashboard</button>
+            <button onclick="turnBlock('calendar')">Calendar</button>
+            <button onclick="turnBlock('messages')">Messages</button>
+        </nav>
+        <div id="content">
+            <div id="dashboard">
+                <h1>Dashboard</h1>
+            </div>
+            <div id="calendar">
+                <h1>Calendar</h1>
+            </div>
+            <div id="messages">
+                <h1>Messages</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

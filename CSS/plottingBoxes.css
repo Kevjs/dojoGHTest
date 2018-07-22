@@ -1,0 +1,15 @@
+#greyBox{
+    height:500px;
+    width:800px;
+    background-color: grey;
+    margin: 0px auto;
+}
+#greenBox{
+    height:100px;
+    background-color:green;
+    margin:10px;
+}
+#blueBox{
+    background-color: blue;
+    float: left;
+}

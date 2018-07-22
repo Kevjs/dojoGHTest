@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div id="ocean">
+		<div id="players">
+		</div>
+		<div id="enemies">
+		</div>
+		<div id=missiles>
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript">
+    
+		function sumMinMax (arr){
+            var max = arr[0];
+            var min = arr[0];
+            for (var i = 1; i < arr.length; i++){
+                if(arr[i]>max)
+                    max = arr[i];
+                else if(arr[i] > min){
+                    min = arr[i];
+                }
+            }
+            return (min+max);1
+        }
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* body *{
+    outline: 3px solid red;
+} */
+#content{
+    text-align: center;
+    width:fit-content;
+    background-color:white;
+}
+.rightT p{
+    color:white;
+}
+.rightT a{
+    color:yellow;
+}
+.rightT form{
+    padding:10px;
+    background-color:black;
+}
+#head{
+    background-color:#245076;
+}
+#head img,.rightT{
+    display:inline-block;
+    vertical-align: top;
+}
+#head ul{
+    display:inline-block;
+    border-radius: 30px;
+    padding:10px;
+    background-color:blue;
+    color:white;
+    list-style: none;
+}
+
+#head ul li{
+    margin:0px 20px;
+    display:inline-block;
+}
+#head .left a{
+    color:white;
+}
+#head .left{
+    margin-right: 30px;
+    vertical-align: top;
+    display:inline-block;
+}
+#head .right{
+    text-align: center;
+    width:600px;
+    vertical-align: top;
+    display:inline-block;
+    color:white;
+}
+#head .right h3{
+    color:yellow;
+    font-style: italic;
+}
+.mid{
+    margin: 30px 0px;
+}
+.mid .side{
+    border-top: 2px solid blue;
+    vertical-align: top;
+    margin:0px 25px;
+    width:350px;
+    display:inline-block;
+}
+.mid a{
+    text-decoration: none;
+    color:lightblue;
+}
+.mid *{
+    margin:0px;
+}
+.bottom{
+    color:lightblue;
+    background-color:#245076;
+    padding-top:15px;
+}
+.bottom a{  
+    text-decoration: none;
+    margin: 0px 25px;
+    color:lightblue;
+}
+.bottom nav{
+    margin-bottom:25px;
+}
+.bottom p{
+    font-size:10px;
+    margin:0px;
+    padding:0px;
+}

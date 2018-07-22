@@ -1,0 +1,13 @@
+#calendar{
+    display:none;
+}
+#messages{
+    display:none;
+    background-color:lightgreen;
+}
+#calendar{
+    background-color:lightblue;
+}
+#dashboard{
+    background-color:white;
+}

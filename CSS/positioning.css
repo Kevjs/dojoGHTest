@@ -1,0 +1,28 @@
+#container{
+    display: inline-block;
+    background-color: grey;
+    /* position: absolute; */
+    height:2000px;
+    width:2000px;
+}
+#box0, #box1, #box2{
+    display:inline-block;
+    height:100px;
+    width:100px;
+    margin:10px;
+}
+#box0{
+    background-color:blue;
+    /* position: absolute;
+    top:106px; */
+}
+#box1{
+    background-color:red;
+    /* position:relative;
+    top:110px;
+    left:20px; */
+}
+#box2{
+    background-color:green;
+    position:fixed;
+}
