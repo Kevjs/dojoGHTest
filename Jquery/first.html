@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('h1').click(function(){
+                var a = $('p').html();
+                console.log(a);
+                $(this).slideToggle();
+            })
+            $('form').submit(function(){
+                alert("you are submitting yourself")
+            })
+            $(".btn").click(function(){
+                $('form').submit();
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>
+        Testing
+    </h1>
+    <p>
+        Dissappear
+    </p>
+    <p>
+        testing a
+    </p>
+    <p>
+        no?
+    </p>
+    <h1>
+        Testing
+    </h1>
+    <p>
+        Dissappear
+    </p>
+    <p>
+        testing a
+    </p>
+    <p>
+        no?
+    </p>
+    <form action="Ninja-cat/ninja-cat.html">
+        <input type="submit" value="S">
+    </form>
+    <button class="btn">CLICK</button>
+    
+</body>
+</html>

@@ -1,0 +1,6 @@
+    .problems *{
+        display: inline-block;
+    }
+    .added{
+        background-color: blue;
+    }

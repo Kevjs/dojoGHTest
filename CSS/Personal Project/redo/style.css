@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color:BLUE;
+    background-color:black;
 }
 #wrapper{
     margin:10px;
@@ -33,6 +33,9 @@ body{
     }
     .dropdown{
         margin-left: 100px;
+    }
+    .dropdown-content *:hover{
+        background-color:grey;
     }
     .dropdown-content {
         display: none;

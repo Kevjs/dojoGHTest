@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .imgs {
+            display:inline-block;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .imgs img{
+            width:250px;
+            height:400px;
+        }
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+                $(".imgs").hover(function(){
+                    var imaage = $(this).find('img');
+                    $(this).append($(imaage).attr("alt-text"));
+                    var temp = $(imaage).attr('alt-img');
+                    $(imaage).attr("alt-img", $(imaage).attr('src'));
+                    $(imaage).attr("src", temp);
+                }, function(){
+                    var imaage = $(this).find('img');
+                    var temp = $(imaage).attr('alt-img');
+                    $(imaage).attr("alt-img", $(imaage).attr('src'));
+                    $(imaage).attr("src", temp);
+                    $(this).find(".text").remove();
+                })
+        })
+
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="imgs">
+            <img src="https://cdn.qwertee.com/images/designs/product-thumbs/1532013386-135442-zoom-380x456.jpg" alt-img="https://cdn.qwertee.com/images/designs/product-thumbs/1531995468-135065-zoom-380x456.jpg" alt-text="<div class='text'><p>This text inside the image</p></div>">
+        </div>
+        <div class="imgs">
+            <img src="https://cdn.qwertee.com/images/designs/product-thumbs/1532013386-135442-zoom-380x456.jpg" alt-img="https://cdn.qwertee.com/images/designs/product-thumbs/1531995468-135065-zoom-380x456.jpg" alt-text="<div class='text'><p>This text inside the image</p></div>">
+        </div>
+        <div class="imgs">
+            <img src="https://cdn.qwertee.com/images/designs/product-thumbs/1532013386-135442-zoom-380x456.jpg" alt-img="https://cdn.qwertee.com/images/designs/product-thumbs/1531995468-135065-zoom-380x456.jpg" alt-text="<div class='text'><p>This text inside the image</p></div>">
+        </div>
+        <div class="imgs">
+            <img src="https://cdn.qwertee.com/images/designs/product-thumbs/1532013386-135442-zoom-380x456.jpg" alt-img="https://cdn.qwertee.com/images/designs/product-thumbs/1531995468-135065-zoom-380x456.jpg" alt-text="<div class='text'><p>This text inside the image</p></div>">
+        </div>
+        <div class="imgs">
+            <img src="https://cdn.qwertee.com/images/designs/product-thumbs/1532013386-135442-zoom-380x456.jpg" alt-img="https://cdn.qwertee.com/images/designs/product-thumbs/1531995468-135065-zoom-380x456.jpg" alt-text="<div class='text'><p>This text inside the image</p></div>">
+        </div>
+        <div class="imgs">
+            <img src="https://cdn.qwertee.com/images/designs/product-thumbs/1532013386-135442-zoom-380x456.jpg" alt-img="https://cdn.qwertee.com/images/designs/product-thumbs/1531995468-135065-zoom-380x456.jpg" alt-text="<div class='text'><p>This text inside the image</p></div>">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $("#sea").submit(function(){
+            //     var text = $(".search").attr("value");
+            //     console.log(text);
+            //     return false;
+            // })
+            $(".search").keyup(function(){
+                if($(this).val()!=""){
+                var text = "<img src='http://pokeapi.co/media/img/"+$(this).val()+".png'>";
+                $("#pics").children().remove();
+                $("#pics").append(text);
+                var text2 = "https://pokeapi.co/api/v2/pokemon/"+$(this).val()+"/";
+                $.get(text2, function(res) {
+                    for(var i = 0; i < res.abilities.length; i++)
+                        $("#pics").append("<p>"+res.abilities[i].ability.name+"</p>");
+                }, "json");
+                // var text2 = "https://pokeapi.co/api/v2/pokemon/"+$(this).val()+"/";
+                // $.get(text2, function(res) {
+                //     console.log(res.types[0].name);
+                //     console.log(res.types[1].name);
+                // }, "json");
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <form id="sea">
+        <input type="text" class="search" value="">
+        <input type="submit" value="Go">
+    </form>
+    <div id="pics">
+
+    </div>
+    
+</body>
+</html>

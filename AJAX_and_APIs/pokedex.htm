@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #pokedex{
+            text-align: center;
+            vertical-align: top;
+            display:inline-block;
+            background-color:red;
+            width:200px;
+        }
+        #pokedex ul{
+            list-style: none;
+            padding:0;
+        }
+        #pokePic{
+            padding:30px;
+        }
+        #pokePic img{
+            width:140px;
+        }
+        #allPics{
+            display:inline-block;
+            width:700px;
+        }
+        img{
+            width:58px;
+            border:1px solid black;
+            background-color:white;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            for(var i = 1; i < 152; i++){
+                $("#allPics").append("<img id="+i+" src='http://pokeapi.co/media/img/"+i+".png'>");
+            }
+            $("#allPics img").click(function(){
+                $(".type").html("");
+                $(".weight").html("");
+                $(".height").html("");
+                $("#pokePic").html("<img src='http://pokeapi.co/media/img/"+$(this).attr("id")+".png'>")
+                $.get("https://pokeapi.co/api/v2/pokemon/"+$(this).attr("id")+"/", function(res){
+                    console.log(res);
+                    var type ="";
+                    var height = ""+res.height;
+                    var weight = ""+res.weight;
+                    for(var i = 0; i < res.types.length; i++){
+                        type += "<li>"+res.types[i].type.name+"</li>";
+                    }
+                    $(".type").html(type);
+                    $(".weight").html(weight);
+                    $(".height").html(height);
+                })
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="allPics">
+
+        </div>
+        <div id="pokedex">
+            <div id="pokePic">
+            </div>
+            <h1>Types</h1>
+            <ul class="type">
+            </ul>
+            <h1>Weight</h1>
+            <p class="weight"></p>
+            <h1>Height</h1>
+            <p class="height"></p>
+        </div>
+    </div>
+    
+</body>
+</html>

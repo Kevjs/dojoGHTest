@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #imgs{
+            height:250px;
+        }
+        #imgs *{
+            width:100px;
+            height:100px;
+            display: inline-block;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".ninji").click(function(){
+                $(this).fadeOut();
+            });
+            $("#reset").click(function(){
+                $("#imgs").children().fadeIn();
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="imgs">
+    <div class="ninji"><img src="https://cdn.qwertee.com/images/designs/product-thumbs/1532013386-135442-zoom-380x456.jpg" alt="ninji"></div>
+        <div class="ninji"><img src="https://cdn.qwertee.com/images/designs/product-thumbs/1532013386-135442-zoom-380x456.jpg" alt="ninji"></div>
+        <div class="ninji"><img src="https://cdn.qwertee.com/images/designs/product-thumbs/1532013386-135442-zoom-380x456.jpg" alt="ninji"></div>
+        <div class="ninji"><img src="https://cdn.qwertee.com/images/designs/product-thumbs/1532013386-135442-zoom-380x456.jpg" alt="ninji"></div>
+        <div class="ninji"><img src="https://cdn.qwertee.com/images/designs/product-thumbs/1532013386-135442-zoom-380x456.jpg" alt="ninji"></div>
+        <div class="ninji"><img src="https://cdn.qwertee.com/images/designs/product-thumbs/1532013386-135442-zoom-380x456.jpg" alt="ninji"></div>
+        <div class="ninji"><img src="https://cdn.qwertee.com/images/designs/product-thumbs/1532013386-135442-zoom-380x456.jpg" alt="ninji"></div>
+        <div class="ninji"><img src="https://cdn.qwertee.com/images/designs/product-thumbs/1532013386-135442-zoom-380x456.jpg" alt="ninji"></div>
+    </div>
+    <button id="reset">Reset</button>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>draggy</title>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <style>
+        img{
+            display:block;
+        }
+        ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $(function(){
+            $( "#sortable" ).sortable({
+                revert: true
+            });
+            $( "#draggable" ).draggable({
+                connectToSortable: "#sortable",
+                helper: "clone",
+                revert: "invalid"
+            });
+            $( "ul, li" ).disableSelection();
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul id="sortable">
+        <li><img class="draggable" src="ninja0.png"></li>
+        <li><img class="draggable" src="ninja1.png"></li>
+        <li><img class="draggable" src="ninja2.png"></li>
+        <li><img class="draggable" src="ninja3.png"></li>
+        <li><img class="draggable" src="ninja4.png"></li>
+    </ul> 
+</body>
+</html>

@@ -11,3 +11,21 @@
 #dashboard{
     background-color:white;
 }
+.row{
+    font-size: 0;
+}
+.row:last-child .cell{
+    border-bottom:1px solid black;
+}
+.cell:last-child{
+    border-right:1px solid black;
+}
+.cell{
+    box-sizing: border-box;
+    background-color:white;
+    display: inline-block;
+    border-top:1px solid black;
+    border-left:1px solid black;
+    height:80px;
+    width:14.285%;
+}

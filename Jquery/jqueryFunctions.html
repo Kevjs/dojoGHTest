@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My jQuery Basic Assignment</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        $(document).ready(function(){
+            $(".problems.4").children().last().children().last().hide();
+            $('.problems p').click(function(){
+                $(this).next().children('p').css("background-color", "red");
+            });
+            $('.problems.1 button').click(function(){
+                $(this).next().children('p').slideToggle();
+            });
+            $('.problems.2 button').click(function(){
+                $(this).next().append("<p>Trying new tag</p>");
+            });
+            $('.problems.3 button').click(function(){
+                $(this).next().children('p').hide();
+            });
+            $('.problems.4 button').click(function(){
+                $(this).next().children().last().show();
+            });
+            $('.problems.5 button').click(function(){
+                $(this).next().children('p').fadeToggle();
+            });
+            $('.problems.6 button').click(function(){
+                $(this).parent().toggleClass('added');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="problems">
+            <p>Add Class</p>
+            <div class="solution">
+                <h1>Add Class</h1>
+                <p>Click the button to add class 'red' to this paragraph</p>
+            </div>
+        </div>
+        <div class="problems 1">
+            <button type="button">Add Class</button>
+            <div class="solution">
+                <h1>Slide Toggle</h1>
+                <p>Click the button to slidetoggle a image</p>
+            </div>
+        </div>
+        <div class="problems 2">
+            <button type="button">Append</button>
+            <div class="solution">
+                <h1>Append</h1>
+                <p>Click the button to append a new paragraph</p>
+            </div>
+        </div>
+        <div class="problems 3">
+            <button type="button">Append</button>
+            <div class="solution">
+                <h1>Append</h1>
+                <p>Click the button to append a new paragraph</p>
+            </div>
+        </div>
+        <div class="problems 4">
+            <button type="button">Append</button>
+            <div class="solution">
+                <h1>Append</h1>
+                <p>Click the button to append a new paragraph</p>
+            </div>
+        </div>
+        <div class="problems 5">
+            <button type="button">Append</button>
+            <div class="solution">
+                <h1>Append</h1>
+                <p>Click the button to append a new paragraph</p>
+            </div>
+        </div>
+        <div class="problems 6">
+            <button type="button">Append</button>
+            <div class="solution">
+                <h1>Append</h1>
+                <p>Click the button to append a new paragraph</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
